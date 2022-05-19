@@ -17,4 +17,15 @@ public class StatisticsServiceTest {
 
         assertEquals(expected, actual);
     }
+    @Test
+    void findMaxInArrayWhereFirstElementNotMax() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {8, 12, 15, 98, 0, 144, 5, 86};
+        long expected = 144;
+
+        long actual = service.findMax(incomesInBillions);
+
+        assertEquals(expected, actual);
+    }
 }
